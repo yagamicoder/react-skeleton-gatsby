@@ -1,0 +1,54 @@
+{
+  "presets": ["stage-2"],
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./src"
+            ],
+            "alias": {
+              "~": "./src",
+              "components": "./src/components",
+              "images": "./src/images",
+              "hoc": "./src/hoc",
+              "layouts": "./src/layouts",
+              "pages": "./src/pages",
+              "state": "./src/state",
+              "styles": "./src/styles",
+              "utils": "./src/utils"
+            }
+          }
+        ],
+        ["transform-define", {
+          "process.env.EXAMPLE": "example"
+        }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./"
+            ],
+            "alias": {
+              "~": "./src",
+              "components": "./src/components",
+              "images": "./src/images",
+              "hoc": "./src/hoc",
+              "layouts": "./src/layouts",
+              "pages": "./src/pages",
+              "state": "./src/state",
+              "styles": "./src/styles",
+              "utils": "./src/utils"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}
